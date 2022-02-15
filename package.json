@@ -1,0 +1,33 @@
+{
+  "name": "nrlint-plugin-rules-compat",
+  "version": "0.0.1",
+  "description": "Flow compatibility check rule plugin for nrlint",
+  "bugs": "https://github.com/node-red-hitachi/nrlint-plugin-rules-compat/issues",
+  "repository": "node-red-hitachi/nrlint-plugin-rules-compat",
+  "scripts": {
+    "build": "webpack -c ./webpack.config.js"
+  },
+  "keywords": [
+    "nrlint"
+  ],
+  "license": "Apache-2.0",
+  "author": "Kunihiko Toumura",
+  "main": "rule.js",
+  "node-red": {
+    "version": ">=2.0.0",
+    "plugins": {
+      "compat-rule-plugin": "compat-rule.html"
+    }
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "semver": "^7.3.5"
+  }
+}

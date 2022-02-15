@@ -51,3 +51,4 @@ Below is an example of the handler for the change node.
 |tcp request | return Strings | >=2.1.0 |
 |tls-config | ALPN protocol | >=2.0.0 |
 |websocket-client | heartbeat | >=2.0.0 |
+|any JSONata exp. | incompatibility due to JSONata version | varies |

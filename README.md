@@ -3,6 +3,24 @@ Flow compatibility check rule plugin for nrlint
 
 __Under development: use for design discussion__
 
+Depending on the version of the Node-RED runtime, there are differences
+in the features available on each node.
+Because of this, a flow developed in a newer/older version of 
+Node-RED may not work properly if you try to export it to an older/newer
+version of Node-RED.
+
+For example:
+- since v1.1.0, it has been possible to set any properties in the inject node, 
+  so if you try to use a flow that uses this feature with a runtime prior to v1.1.0,
+  you will have problems.
+- Tail node is removed from default dependency since v2.0.0
+  You need to explicitly install the tail node in order to run flows that contain
+  the tail node in runtimes v2.0.0 or newer.
+
+This rule plugin detect version incompatibility issues in the flow and notifies the developer.
+
+![example](inject-result.png)
+
 ## Usage
 
 ### 1. install 
